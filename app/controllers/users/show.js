@@ -17,7 +17,7 @@ const Show = class Show {
    * Middleware
    */
   middleware () {
-    this.app.get('/users/show/:city', (req, res) => {
+    this.app.get('/users/show/:id', (req, res) => {
       try {
         this.UserModel.findById(req.params.id).then((user) => {
           res.status(200).json(user || {})
