@@ -1,6 +1,6 @@
 const UserModel = require('../../models/user.js')
 
-const Show = class Show {
+const Create = class Create {
   /**
    * @constructor
    * @param {Object} app
@@ -17,15 +17,14 @@ const Show = class Show {
    * Middleware
    */
   middleware () {
-    this.app.get('/users/show/:city', (req, res) => {
+    this.app.post('/user/', (req, res) => {
       try {
-        this.UserModel.findById(req.params.id).then((user) => {
+        const userModel = new this.UserModel(req.body)
+
+        userModel.save().then((user) => {
           res.status(200).json(user || {})
         }).catch(() => {
-          res.status(500).json({
-            code: 500,
-            message: 'Internal Server error'
-          })
+          res.status(200).json({})
         })
       } catch (err) {
         console.error(`[ERROR] users/show/:id -> ${err}`)
@@ -46,4 +45,4 @@ const Show = class Show {
   }
 }
 
-module.exports = Show
+module.exports = Create

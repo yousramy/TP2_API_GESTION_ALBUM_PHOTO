@@ -1,5 +1,6 @@
 // Dependencies
 const express = require('express')
+const mongoose = require('mongoose')
 
 // Dependencies middleware
 const bodyParser = require('body-parser')
@@ -20,6 +21,40 @@ module.exports = class Server {
     this.config = config[process.argv[2]] || config.development
   }
 
+  /*
+   * db connect
+   * @return {Object} connect
+   */
+  dbConnect () {
+    const host = this.config.mongodb
+    const connect = mongoose.createConnection(host)
+
+    connect.on('error', (err) => {
+      setTimeout(() => {
+        console.log('[ERROR] users api dbConnect() -> mongodb error')
+        this.connect = this.dbConnect(host)
+      }, 5000)
+
+      console.error(`[ERROR] users api dbConnect() -> ${err}`)
+    })
+
+    connect.on('disconnected', (err) => {
+      setTimeout(() => {
+        console.log('[DISCONNECTED] users api dbConnect() -> mongodb disconnected')
+        this.connect = this.dbConnect(host)
+      }, 5000)
+    })
+
+    process.on('SIGINT', () => {
+      connect.close(() => {
+        console.log('[API END PROCESS] users api dbConnect() -> close mongodb connection')
+        process.exit(0)
+      })
+    })
+
+    return connect
+  }
+
   /**
    * Middleware
    */
@@ -34,10 +69,8 @@ module.exports = class Server {
    * Routes
    */
   routes () {
-    new routes.users.Show(this.app, this.config)
-    new routes.users.Update(this.app, this.config)
-    new routes.users.Create(this.app, this.config)
-    new routes.users.Delete(this.app, this.config)
+    new routes.users.Show(this.app, this.connect, this.config)
+    new routes.user.Create(this.app, this.connect, this.config)
 
     // If route not exist
     this.app.use((req, res) => {
@@ -61,10 +94,11 @@ module.exports = class Server {
    */
   run () {
     try {
+      this.connect = this.dbConnect()
       this.security()
       this.middleware()
       this.routes()
-      this.app.listen(3000)
+      this.app.listen(this.config.port)
     } catch (err) {
       console.error(`[ERROR] Server -> ${err}`)
     }
