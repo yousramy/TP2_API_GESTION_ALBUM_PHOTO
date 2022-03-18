@@ -27,7 +27,7 @@ const Create = class Create {
           res.status(200).json({})
         })
       } catch (err) {
-        console.error(`[ERROR] users/show/:id -> ${err}`)
+        console.error(`[ERROR] users/create -> ${err}`)
 
         res.status(400).json({
           code: 400,
