@@ -2,11 +2,11 @@ module.exports = {
   development: {
     type: 'development',
     port: 3000,
-    mongodb: 'mongodb+srv://xzen:123575@cluster0.omfyu.mongodb.net/school?retryWrites=true&w=majority'
+    mongodb: 'mongodb+srv://root:root@demo.v4muu5b.mongodb.net/ecole?retryWrites=true&w=majority'
   },
   production: {
     type: 'production',
     port: 3000,
-    mongodb: 'mongodb+srv://xzen:123575@cluster0.omfyu.mongodb.net/school?retryWrites=true&w=majority'
+    mongodb: 'mongodb+srv://root:root@demo.v4muu5b.mongodb.net/ecole?retryWrites=true&w=majority'
   }
 }

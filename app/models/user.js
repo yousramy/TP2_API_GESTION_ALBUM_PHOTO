@@ -1,10 +1,9 @@
 const mongoose = require('mongoose')
 
 const Schema = new mongoose.Schema({
-  firstname: String,
-  lastname: String,
-  age: Number,
-  city: String
+  name: String,
+  role: String,
+  avatar: String
 }, {
   collection: 'users',
   minimize: false,
