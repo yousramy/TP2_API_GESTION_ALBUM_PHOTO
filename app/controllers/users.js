@@ -6,9 +6,10 @@ const Users = class Users {
    * @param {Object} app
    * @param {Object} connect
    */
-  constructor (app, connect) {
+  constructor (app, connect, authenticateToken) {
     this.app = app
     this.UserModel = connect.model('User', UserModel)
+    this.authenticateToken = authenticateToken
 
     this.run()
   }
@@ -17,7 +18,7 @@ const Users = class Users {
    * Delete by id
    */
     deleteById () {
-      this.app.delete('/user/:id', (req, res) => {
+      this.app.delete('/user/:id', this.authenticateToken, (req, res) => {
         try {
           this.UserModel.findByIdAndDelete(req.params.id).then((user) => {
             res.status(200).json(user || {})
@@ -42,16 +43,23 @@ const Users = class Users {
    * Show by id
    */
   showById () {
-    this.app.get('/user/:id', (req, res) => {
+    this.app.get('/user/:id', this.authenticateToken,  (req, res) => {
       try {
-        this.UserModel.findById(req.params.id).then((user) => {
-          res.status(200).json(user || {})
-        }).catch(() => {
-          res.status(500).json({
-            code: 500,
-            message: 'Internal Server error'
+        if (req.user.role === 'coach') {
+          this.UserModel.findById(req.params.id).then((user) => {
+            res.status(200).json(user || {})
+          }).catch(() => {
+            res.status(500).json({
+              code: 500,
+              message: 'Internal Server error'
+            })
           })
-        })
+        } else {
+          res.status(401).json({
+            code: 401,
+            message: 'Unauthorized you are not a coach'
+          })
+        }
       } catch (err) {
         console.error(`[ERROR] users/:id -> ${err}`)
 

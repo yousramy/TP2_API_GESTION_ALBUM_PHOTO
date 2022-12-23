@@ -1,6 +1,7 @@
 // Dependencies
 const express = require('express')
 const mongoose = require('mongoose')
+const jwt = require('jsonwebtoken')
 
 // Dependencies middleware
 const bodyParser = require('body-parser')
@@ -69,7 +70,8 @@ module.exports = class Server {
    * Routes
    */
   routes () {
-    new routes.Users(this.app, this.connect)
+    new routes.Users(this.app, this.connect, this.authenticateToken)
+    new routes.Auth(this.app)
 
     // If route not exist
     this.app.use((req, res) => {
@@ -86,6 +88,20 @@ module.exports = class Server {
   security () {
     this.app.use(helmet())
     this.app.disable('x-powered-by')
+  }
+
+  authenticateToken(req, res, next) {
+    const token = req.headers['authorization']
+
+    if (!token) return res.sendStatus(403)
+
+    jwt.verify(token, 'webforce3', (err, user) => {
+      if (err) return res.sendStatus(401)
+
+      req.user = user
+
+      next()
+    })
   }
 
   /**
