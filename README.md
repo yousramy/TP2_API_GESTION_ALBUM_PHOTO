@@ -1,5 +1,9 @@
 # API Users, Album et Photo
 
+## Groupe
+
+Manel CHENNA & Yousra MBARKI
+
 ## Overview
 Cette API permet de gérer des utilisateurs, des albums et des photos dans une application utilisant une architecture de microservices REST. Elle fournit des fonctionnalités CRUD (Create, Read, Update, Delete) pour chaque entité, permettant ainsi une gestion complète des données de l'application.
 
