@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "39873298-5020-4931-93bc-24bb0114616c",
+		"name": "api_tp2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38123056"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/albums/66d82671f373209581bf358a/photos/66d82ea890d776ae53acdc02",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Printemps 6...4\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\",\r\n    \"id\": \"66d82ea890d776ae53acdc02\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/albums/66d82671f373209581bf358a/photos/66d82ea890d776ae53acdc02"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo/66d82ea890d776ae53acdc02",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 6\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo/66d82ea890d776ae53acdc02"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/albums/66d82671f373209581bf358a/photos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 6\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/albums/66d82671f373209581bf358a/photos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo/66d82ea890d776ae53acdc02",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 6\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo/66d82ea890d776ae53acdc02"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 6\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 6\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/album/66d82639f373209581bf3586",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"Vacances d'été\",\r\n        \"description\": \"Photos de mes vacances d'été +++\",\r\n        \"photos\": [],\r\n        \"id\": \"66d82639f373209581bf3586\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/album/66d82639f373209581bf3586"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo/66d82b3c57dff76502436c26",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 6\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo/66d82b3c57dff76502436c26"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo/66d82b3c57dff76502436c26",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 6\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo/66d82b3c57dff76502436c26"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 6\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 5\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 3\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps 23\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo/66d82b3c57dff76502436c26",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo/66d82b3c57dff76502436c26"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/photo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"title\": \"Printemps\",\r\n    \"url\": \"https://www.google.fr/search?sca_esv=c7a01837b1eb8e0f&sxsrf=ADLYWIJEa6Gs0vWhr2xKziRzrSfzbce-Kw:1725442680884&q=printemps&udm=2&fbs=AEQNm0CbCVgAZ5mWEJDg6aoPVcBgTlosgQSuzBMlnAdio07UCInyHm0lJ2YQ5UROiLLyqnAhRaazAsHdOBLZDLu9DFCNTnDwn5oh8lsnY1zI7N60896_4gIfYyjJrnP7qOUbAb0hnlzWk1PI0vsKCJlUW5ZAjfVy1MOezPSxLn4GECDmRHpFTDh5_EO0aiaqU_Sgf0bOmPdTVJ69z2wAgnIuKqaI-L4pXQ&sa=X&ved=2ahUKEwiD9Mvw_qiIAxXWfKQEHU8gGo8QtKgLegQIHRAB&biw=1280&bih=551&dpr=1.5#vhid=MuwHPyOiQrhVyM&vssid=mosaic\",\r\n    \"description\": \"Description de la deuxième image\",\r\n    \"album\": \"66d82671f373209581bf358a\" \r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/photo"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/albums",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/albums"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Vacances de printemps\",\r\n  \"description\": \"Photos de mes vacances de printemps\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/album"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Vacances d'été\",\r\n  \"description\": \"Photos de mes vacances d'été\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/album"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/album/66d82361f373209581bf3583",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Vacances d'été\",\r\n  \"description\": \"Photos de mes vacances d'été\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/album/66d82361f373209581bf3583"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/album",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Vacances d'été\",\r\n  \"description\": \"Photos de mes vacances d'été\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/album"
+			},
+			"response": []
+		}
+	]
+}
